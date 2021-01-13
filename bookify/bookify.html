@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Log In - Bookify</title>
+    <link rel="shortcut icon" type="img/png" href="logo-removebg-preview.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="bookify.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.js"></script>
+    <div id="id1">
+        <video autoplay muted loop id="myVideo">
+            <source src="_Book_ Blender 3D Animation.mp4">
+        </video>
+        <header>
+            <h1 id="h1">Bookify</h1>
+        </header>    
+        <section>   
+            <form id="ul1">
+                <br>
+                <br>
+                <br>
+                <input type="email" name="ename" placeholder="Email address" id="id2" autocomplete="off" required>
+                <br>
+                <br>
+                <input type="password" name="pname" placeholder="Password" id="id2" autocomplete="off" required>
+                <br>
+                <br>
+                <button id="btn1" href="#">Log In</button>
+                <br>
+                <a href="forgotten password.html" id="a1">forgotten password?</a>
+                <br>
+                <a href="create account.html" id="a1">Don't have an account? Create a new one!</a>
+            </form>    
+        </section>
+        <script>
+            $(document).ready(function(){
+                $("#ul1").validate({
+                    rules:{
+                        ename:{
+                            required: true,
+                            email:true
+                        },
+                        pname:{
+                            required: true,
+                        }
+                    },
+                    messages:{
+                        ename:{
+                            required:"
+                            ",
+                            email:"
+                            "
+                        },
+                        pname:{
+                            required:"
+                            "
+                        }
+                    } 
+                })
+            })
+        </script>
+    </div>
+</body>
+</html>

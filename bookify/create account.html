@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Create Account - Bookify</title>
+    <link rel="shortcut icon" type="img/png" href="logo-removebg-preview.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="bookify.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.js"></script>
+    <div id="id1">
+        <video autoplay muted loop id="myVideo">
+            <source src="_Book_ Blender 3D Animation.mp4">
+        </video>
+        <header>
+            <h1 id="h1">Bookify</h1>
+        </header>
+        <form id="section">
+            <div id="account">
+                <ul>
+                    <br>
+                    <input id="inpanim1" name="firstname" type="text" placeholder="First Name" autocomplete="off" required>
+                    <br>
+                    <br>
+                    <input id="inpanim1" name="surname" type="text" placeholder="Surname" autocomplete="off" required> 
+                    <br>
+                    <br>
+                    <input id="inpanim1" name="ename" type="email" placeholder="Email Address" autocomplete="off" required>
+                    <br>
+                    <br>
+                    <input id="inpanim1" name="pname" type="password" placeholder="New Password" autocomplete="off" required>
+                    <br>
+                    <br>
+                    <input class="date" name="date" id="inpanim1" type="date" autocomplete="off" required>
+                    <br>
+                    <br>
+                    <p style="color: #48F7A7; margin-left: -80%;"><u>optional</u></p>
+                    <input type="radio" name="gender" style="margin-right: -15px;"><label style="color: #48F7A7; margin-left: 0px; float: left;">Male</label>
+                    <p></p>
+                    <input type="radio" name="gender"><label style="color: #48F7A7; float: left;">Female</label>
+                    <p></p>
+                    <input type="radio" name="gender"><label style="color: #48F7A7; float: left;">Custom</label>
+                    <br>
+                    <br>
+                    <input type="submit" id="btn2">
+
+                </ul>
+            </div>
+        </form> 
+        <script>
+            $(document).ready(function(){
+                $("#section").validate({
+                    rules:{
+                        ename:{
+                            required: true,
+                            email:true
+                        },
+                        gender, date:{
+                            required: true
+                        },
+                        firstname, surname, pname:{
+                            required: true,
+                            minlength: 3,
+                            maxlenght: 30,
+                        },
+                    },
+                    messages:{
+                        ename:{
+                            required:"
+                            ",
+                            email:"
+                            "
+                        },
+                    } 
+                })
+            })
+        </script>  
+    </div>
+</body>
+</html>
